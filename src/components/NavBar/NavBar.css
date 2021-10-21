@@ -1,0 +1,43 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: #29539b;
+    background-image: linear-gradient(315deg, #29539b 0%, #1e3b70 74%);
+}
+
+.nav{
+    display: flex;
+    height: 100vh;
+}
+
+.contH1{
+    border-bottom: double 4px white;
+    position: relative;
+    top: 15%;
+}
+h1{
+    color: white;
+}
+.nav-link{
+    color: white;
+    margin-top: 20px;
+    position: relative;
+    top: 30%;
+    font-size: 20px;
+    transition: all 0.3s;
+}
+.nav-link:hover{
+    color: #fff;
+	text-shadow:
+		0 0 5px rgb(252, 252, 252),
+		0 0 10px rgb(200, 228, 240),
+		0 0 20px rgb(201, 208, 211),
+		0 0 40px rgb(74, 87, 92),
+		0 0 80px rgba(38,104,127,1),
+		0 0 90px rgb(253, 253, 253),
+		0 0 100px rgba(38,104,127,1),
+		0 0 140px rgba(38,104,127,1),
+		0 0 180px rgba(38,104,127,1);
+}
