@@ -1,43 +1,85 @@
-*{
-    padding: 0;
-    margin: 0;
-}
-body{
-    background-color: #29539b;
-    background-image: linear-gradient(315deg, #29539b 0%, #1e3b70 74%);
+.navbar{
+    background-color:#212121;
+    border-bottom: #C70039 solid 2px;
 }
 
-.nav{
-    display: flex;
-    height: 100vh;
+    .navbar-light .navbar-toggler-icon{
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.85)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+     }
+
+.inicialMenu{
+    color: #C70039;
+    font-weight: 600;
+}
+.h5Menu{
+    color: white;
+    font-family: 'Cinzel Decorative', cursive;
+} 
+
+.cabezaMenu{
+    background-color: #212121;
+    border-left: #C70039 solid 1px;
+}
+    .btn-close {
+        filter: invert();
+        opacity: 1;
+    }
+
+.cuerpoMenu{
+    background-color: #212121;
+    border-left: #C70039 solid 1px;
 }
 
-.contH1{
-    border-bottom: double 4px white;
-    position: relative;
-    top: 15%;
-}
-h1{
+
+.lista{
+    letter-spacing: 2px;
+    font-family: 'Cinzel Decorative', cursive;
     color: white;
+    transition: all 0.4s;
 }
-.nav-link{
-    color: white;
-    margin-top: 20px;
-    position: relative;
-    top: 30%;
-    font-size: 20px;
-    transition: all 0.3s;
+    .lista:hover{
+        color: #C70039;
+        border-left: solid 2px #C70039;
+        border-right: solid 2px #C70039;
+        border-radius: 20px;
+    }
+    .lista:focus{
+        color: #C70039;
+    }
+
+.navbar-nav{
+    margin-top: 100px;
+    line-height: 35px;
+} 
+
+.redes{
+    margin-top: 30px;
+    border-top: solid 2px #C70039;
 }
-.nav-link:hover{
-    color: #fff;
-	text-shadow:
-		0 0 5px rgb(252, 252, 252),
-		0 0 10px rgb(200, 228, 240),
-		0 0 20px rgb(201, 208, 211),
-		0 0 40px rgb(74, 87, 92),
-		0 0 80px rgba(38,104,127,1),
-		0 0 90px rgb(253, 253, 253),
-		0 0 100px rgba(38,104,127,1),
-		0 0 140px rgba(38,104,127,1),
-		0 0 180px rgba(38,104,127,1);
-}
+    .h5Redes{
+        padding: 20px;
+        color: white;
+        font-family: 'Cinzel Decorative', cursive;
+    }
+    .icono{
+        margin-left: 15px;
+        margin-right: 15px;
+        color: white;
+        transition: all 0.4s;
+        
+    }
+    .icono:hover{
+        color: #C70039;
+        transform: rotateZ(20deg);
+    }
+
+.copy{
+    position: absolute;
+    bottom: 5px;
+    left: 50px;
+}    
+    .textCopy{
+        font-size: 12px;
+        color: white;
+        border-bottom: solid 1px #C70039;
+    }

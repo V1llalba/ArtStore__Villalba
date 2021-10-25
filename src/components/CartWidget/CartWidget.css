@@ -1,0 +1,14 @@
+.tituloNav{
+    color: white;
+    font-size: 35px;
+    font-family: 'Cinzel Decorative', cursive;
+    transition: all 0.3s;
+}
+        .tituloNav:hover{
+            color: #C70039;
+        }
+    .inicialLogo{
+        color: #C70039;
+        font-weight: 600;
+    }
+    
