@@ -11,6 +11,9 @@ body{
 .div1{
     height: 90px;
 }
+.div2{
+    height: 400px;
+}
 
 .titulo{
     color: black;
@@ -73,7 +76,6 @@ body{
                 }
                 }
   
-
       
 .contImg{
     width: 100%;
@@ -108,8 +110,6 @@ body{
 .contParrafo2{
     display: flex;
     justify-content: center;
-    top: 450px;
-    position: relative;
 }
     .parrafo2{
         border-top: #C70039 solid 2px;
@@ -119,3 +119,69 @@ body{
         font-family: 'Cinzel Decorative', cursive;
         font-weight: 600;
     }
+    
+
+.contGeneralObras{
+    position: relative;
+    top: 150px;
+}    
+.contObras{
+    display: flex;
+    justify-content: center;
+}
+    .h2Obras{
+        margin-top: 40px;
+        border-bottom: #C70039 solid 2px;
+        font-family: 'Cinzel Decorative', cursive;
+    }
+
+.contEstilos{
+    display: flex;
+    justify-content: left;
+}   
+    .estilos{
+        border-bottom: solid 2px #C70039;
+        margin: 25px;
+        font-family: 'Cinzel Decorative', cursive;
+    }
+
+
+  .card{
+      margin: 25px;
+      transition: all 0.3s;
+      box-shadow: 0px 0px 5px 2px black;
+  } 
+  .card:hover{
+      box-shadow: 0px 0px 25px 0px black;  
+  } 
+.contCardTitle{
+    display: flex;
+    justify-content: center;
+}
+    .card-title{
+        border-bottom: solid 2px #C70039;
+        font-weight: 600;
+       font-family: 'Cinzel Decorative', cursive;
+    }
+
+.contInfo{
+    display: flex;
+}  
+    .h5Info{
+        font-family: 'Cinzel', serif;
+        font-weight: 600;
+        border-bottom: #C70039 solid 2px;
+    }
+        .info{
+            font-size: 18px;
+            text-align: left;
+            font-weight: 500;
+            font-family: 'Cinzel', serif;
+        }
+.card-text{
+    font-weight: 500;
+   font-family: 'Cinzel', serif;
+   font-size: 18px;
+}  
+
+

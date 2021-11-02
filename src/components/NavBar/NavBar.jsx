@@ -4,13 +4,14 @@ import CartWidget from '../CartWidget/CartWidget';
 const NavBar = () => {
   return (
       <div>  
-        <nav className="navbar   fixed-top">
-          <div className="container-fluid">
-          <CartWidget /> 
+      <nav className="navbar fixed-top">
+        <div className="container-fluid">
+          <CartWidget />
             <button className="navbar-light navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
             <span className="navbar-toggler-icon"></span>
-            </button>
-              <div className="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          </button>
+
+          <div className="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                 <div className="cabezaMenu offcanvas-header">
                   <h4 className="h5Menu offcanvas-title" id="offcanvasNavbarLabel"> <span className="inicialMenu">M</span>enu</h4>
                   <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -22,11 +23,6 @@ const NavBar = () => {
                     </li>
                     <li className="nav-item">
                       <a className="lista nav-link" href="#">Obras</a>
-                    </li>
-                    <li className="nav-item">
-                      <a className="lista nav-link" href="#">
-                        Galeria
-                      </a> 
                     </li>
                     <li className="nav-item">
                       <a className="lista nav-link" href="#">
