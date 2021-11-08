@@ -3,11 +3,49 @@
     padding: 0;
     box-sizing: border-box;
 }
+.carga{
+    font-size: 50px;
+    font-family: 'Cinzel Decorative', cursive;
+    position: relative;
+    top: 300px;
+    animation-name: carga;
+    animation-iteration-count: infinite;
+    animation-timing-function: 1s;
+    animation-duration: 5s;
+}
+    @keyframes carga{
+        0%{
+            font-size: 60px;
+            opacity: 0;
+        }
+
+        50%{
+            font-size: 65px;
+            opacity: 1;
+        }
+
+        100%{
+            font-size: 70px;
+        }
+    }
 
 body{
     background-color: rgb(247, 235, 216);
 }
-
+body::-webkit-scrollbar {
+    width: 10px;          
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: #212121;      
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: #C70039;
+    border-radius: 20px;     
+    border: 3px solid #C70039;  
+  }
+  
 .div1{
     height: 90px;
 }
