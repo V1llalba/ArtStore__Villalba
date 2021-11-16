@@ -1,34 +1,61 @@
-import './NavBar.css';
 import CartWidget from '../CartWidget/CartWidget';
+import {Link} from 'react-router-dom'
+
+import './NavBar.css';
 
 const NavBar = () => {
   return (
       <div>  
       <nav className="navbar fixed-top">
         <div className="container-fluid">
-          <CartWidget />
+          <Link to='/'>
+            <CartWidget />
+          </Link>
+          
             <button className="navbar-light navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
             <span className="navbar-toggler-icon"></span>
           </button>
 
           <div className="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                 <div className="cabezaMenu offcanvas-header">
-                  <h4 className="h5Menu offcanvas-title" id="offcanvasNavbarLabel"> <span className="inicialMenu">M</span>enu</h4>
+              <h4 className="h5Menu offcanvas-title" id="offcanvasNavbarLabel"> <span className="inicialMenu">M</span>enu</h4>
                   <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
               </div>
                 <div className="cuerpoMenu offcanvas-body">
                   <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li className="nav-item">
+                  <Link to='/cart'>
+                  <a className="contBolsa" href=""><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bolsa bi bi-bag-fill" viewBox="0 0 16 16">
+                     <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5z"/>
+                    </svg></a>
+                  </Link>
+                  </li>
                     <li className="nav-item">
-                      <a className="lista nav-link" href="#">Inicio</a>
+                  <Link to="/"><a className="lista nav-link" href="#">Inicio</a></Link>
+    
                     </li>
-                    <li className="nav-item">
-                      <a className="lista nav-link" href="#">Obras</a>
-                    </li>
+                    <li class="nav-item dropdown">
+            <a class="lista nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Obras
+            </a>
+            <ul class="subMenu dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
+              <li><Link to="/cuadros"><a class="subLista dropdown-item" href="#">Todo</a></Link></li>
+              <li><Link to="/cuadros/paisajismo"><a class="subLista dropdown-item" href="#">Paisajismo</a></Link></li>
+              <li><Link to="/cuadros/street Art"><a class="subLista dropdown-item" href="#">Street Art</a></Link></li>
+              <li>
+               
+              </li>
+              <li><Link to="/cuadros/retrato"><a class="subLista dropdown-item" href="#">Retrato</a></Link></li>
+            </ul>
+          </li>     
+                    {/* <li className="nav-item">
+                      <Link to="/cuadros"><a className="lista nav-link" href="#">Obras</a></Link>
+                    </li> */}
                     <li className="nav-item">
                       <a className="lista nav-link" href="#">
-                        Contacto
+                    Contacto
                       </a> 
-                    </li>
+                </li>
               </ul>
               <div className="redes">
                 <h5 className="h5Redes"> <span className="inicialMenu">R</span>edes sociales</h5>

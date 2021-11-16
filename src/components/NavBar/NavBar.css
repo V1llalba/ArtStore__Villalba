@@ -16,6 +16,28 @@
     font-family: 'Cinzel Decorative', cursive;
 } 
 
+.subMenu{
+    background-color: #212121; 
+    border: #C70039 solid 2px;
+   
+}
+    .subLista{
+        letter-spacing: 2px;
+        font-family: 'Cinzel Decorative', cursive;
+        color: white;
+        transition: all 0.4s;
+    }
+    .subLista:hover{
+        color: white;
+        border-radius: 20px;
+    }
+    
+    .dropdown-item{
+        text-align: center;
+    }
+    .dropdown-item:hover{
+        background-color: #C70039;
+    }
 .cabezaMenu{
     background-color: #212121;
     border-left: #C70039 solid 1px;
@@ -83,4 +105,16 @@
         color: white;
         border-bottom: solid 1px #C70039;
     }
+
+.contBolsa{
+
+}   
+.bolsa{
+    color: white;
+    transition: all 0.3s;
+}
+    .bolsa:hover{
+        color: #C70039;
+        transform: rotateZ(20deg);
+    }   
 

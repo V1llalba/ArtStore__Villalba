@@ -2,28 +2,20 @@
     color: white;
     font-size: 35px;
     font-family: 'Cinzel Decorative', cursive;
-    transition: all 0.3s;
+    transition: all 0.3s; 
+    text-decoration: none;
+}
+a {
+     text-decoration: none;
 }
         .tituloNav:hover{
-            color: #C70039;
+             color: #C70039; 
         }
     .inicialLogo{
-        color: #C70039;
-        font-weight: 600;
+         color: #C70039;
+        font-weight: 600; 
     }
 
-.contBolsa{
-    position: relative;
-    left: 900px;
-    bottom: 8px;
-}   
-    .bolsa{
-        color: white;
-        transition: all 0.3s;
-    }
-        .bolsa:hover{
-            color: #C70039;
-            transform: rotateZ(20deg);
-        }
+
 
     

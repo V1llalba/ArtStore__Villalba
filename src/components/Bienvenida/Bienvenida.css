@@ -1,0 +1,116 @@
+
+.div1{
+    height: 90px;
+}
+.div2{
+    height: 400px;
+}
+
+.titulo{
+    color: black;
+    font-family: 'Cinzel Decorative', cursive;
+}
+    .inicialA{
+        color: #C70039;
+        font-weight: 600;
+    }
+
+
+.parrafoBienvenida{
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 18px;
+    font-weight: 600;
+    color: #C70039;
+}
+
+/* CARRUSEL */
+
+
+.muestras{
+    display: flex;
+    justify-content: center;
+}
+    .muestrasH2{
+        border-bottom: solid 2px #C70039;
+        color: black;
+        font-family: 'Cinzel Decorative', cursive;
+        margin-top: 20px;
+    }
+        .inicialMuestras{
+            color:#C70039;
+            font-weight: 600;
+        }
+
+
+.contenedorGeneralCarrusel{
+    width: 210px;
+    perspective: 800px;
+    position: relative;
+    margin: auto;
+    margin-top: 50px;
+  }
+      .contenedorCarrusel{
+        width: 100%;
+        position: absolute;
+        animation: rotar 30s infinite linear;
+        transform-style: preserve-3d;
+      }
+        .contenedorCarrusel:hover{
+          animation-play-state: paused;
+          transition: all 300ms;
+          cursor: pointer;
+        }
+            
+            @keyframes rotar{
+                from{
+                  transform: rotateY(0deg);
+                }to{
+                  transform: rotateY(360deg);
+                }
+                }
+  
+      
+.contImg{
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    position: absolute;
+    box-shadow: 0px 0px 20px 0px black;
+  }
+    .contImg:hover{
+        box-shadow: 0px 0px 0px 0px black;
+    }
+        .contImg:nth-child(1){transform: rotateY(0deg) translateZ(300px);}
+        .contImg:nth-child(2){transform: rotateY(40deg) translateZ(300px);}
+        .contImg:nth-child(3){transform: rotateY(80deg) translateZ(300px);}
+        .contImg:nth-child(4){transform: rotateY(120deg) translateZ(300px);}
+        .contImg:nth-child(5){transform: rotateY(160deg) translateZ(300px);}
+        .contImg:nth-child(6){transform: rotateY(200deg) translateZ(300px);}
+        .contImg:nth-child(7){transform: rotateY(240deg) translateZ(300px);}
+        .contImg:nth-child(8){transform: rotateY(280deg) translateZ(300px);}
+        .contImg:nth-child(9){transform: rotateY(320deg) translateZ(300px);}
+        .contImg:nth-child(10){transform: rotateY(360deg) translateZ(300px);}
+      
+            .imgCarrusel{
+              width: 100%;
+            }
+              .imgCarrusel:hover{
+                transform: scale(1.1);
+                transition: all 0.4s;
+              }   
+
+
+.contParrafo2{
+    display: flex;
+    justify-content: center;
+}
+    .parrafo2{
+        border-top: #C70039 solid 2px;
+        border-bottom: #C70039 solid 2px;
+        color: #C70039;
+        font-size: 20px;
+        font-family: 'Cinzel Decorative', cursive;
+        font-weight: 600;
+        margin-top: 50px;
+    }
+    

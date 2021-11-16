@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './ItemCount.css'
 
 
- const ItemCount = ({stock, initial}) => {
+export const ItemCount = ({stock, initial}) => {
     const [count, setCount] = useState(initial)
 
     const sumItem = () => {

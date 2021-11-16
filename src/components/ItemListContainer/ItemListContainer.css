@@ -3,32 +3,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-.carga{
-    font-size: 50px;
-    font-family: 'Cinzel Decorative', cursive;
-    position: relative;
-    top: 300px;
-    animation-name: carga;
-    animation-iteration-count: infinite;
-    animation-timing-function: 1s;
-    animation-duration: 5s;
-}
-    @keyframes carga{
-        0%{
-            font-size: 60px;
-            opacity: 0;
-        }
-
-        50%{
-            font-size: 65px;
-            opacity: 1;
-        }
-
-        100%{
-            font-size: 70px;
-        }
-    }
-
 body{
     background-color: rgb(247, 235, 216);
 }
@@ -45,127 +19,44 @@ body::-webkit-scrollbar {
     border-radius: 20px;     
     border: 3px solid #C70039;  
   }
-  
-.div1{
-    height: 90px;
-}
-.div2{
-    height: 400px;
-}
 
-.titulo{
-    color: black;
+.carga{
     font-family: 'Cinzel Decorative', cursive;
+    animation-name: carga;
+    animation-iteration-count: infinite;
+    animation-timing-function: 1s;
+    animation-duration: 5s;
 }
-    .inicialH1{
+    .cargaInicial{
         color: #C70039;
         font-weight: 600;
     }
 
-
-.parrafoBienvenida{
-    font-family: 'Cinzel Decorative', cursive;
-    font-size: 18px;
-    font-weight: 600;
-    color: #C70039;
-}
-
-
-.muestras{
-    display: flex;
-    justify-content: center;
-}
-    .muestrasH2{
-        border-bottom: solid 2px #C70039;
-        color: black;
-        font-family: 'Cinzel Decorative', cursive;
-        margin-top: 20px;
-    }
-        .inicialMuestras{
-            color:#C70039;
-            font-weight: 600;
-        }
-
-
-.contenedorGeneralCarrusel{
-    width: 210px;
-    perspective: 800px;
-    position: relative;
-    margin: auto;
-    margin-top: 50px;
-  }
-      .contenedorCarrusel{
-        width: 100%;
-        position: absolute;
-        animation: rotar 30s infinite linear;
-        transform-style: preserve-3d;
-      }
-        .contenedorCarrusel:hover{
-          animation-play-state: paused;
-          transition: all 300ms;
-          cursor: pointer;
-        }
-            
-            @keyframes rotar{
-                from{
-                  transform: rotateY(0deg);
-                }to{
-                  transform: rotateY(360deg);
-                }
-                }
-  
-      
-.contImg{
-    width: 100%;
-    height: 200px;
-    overflow: hidden;
-    position: absolute;
-    box-shadow: 0px 0px 20px 0px black;
-  }
-    .contImg:hover{
-        box-shadow: 0px 0px 0px 0px black;
-    }
-        .contImg:nth-child(1){transform: rotateY(0deg) translateZ(300px);}
-        .contImg:nth-child(2){transform: rotateY(40deg) translateZ(300px);}
-        .contImg:nth-child(3){transform: rotateY(80deg) translateZ(300px);}
-        .contImg:nth-child(4){transform: rotateY(120deg) translateZ(300px);}
-        .contImg:nth-child(5){transform: rotateY(160deg) translateZ(300px);}
-        .contImg:nth-child(6){transform: rotateY(200deg) translateZ(300px);}
-        .contImg:nth-child(7){transform: rotateY(240deg) translateZ(300px);}
-        .contImg:nth-child(8){transform: rotateY(280deg) translateZ(300px);}
-        .contImg:nth-child(9){transform: rotateY(320deg) translateZ(300px);}
-        .contImg:nth-child(10){transform: rotateY(360deg) translateZ(300px);}
-      
-            .imgCarrusel{
-              width: 100%;
+        @keyframes carga{
+            0%{
+                font-size: 30px;
+                opacity: 0;
             }
-              .imgCarrusel:hover{
-                transform: scale(1.1);
-                transition: all 0.4s;
-              }   
+        
+            50%{
+                font-size: 40px;
+                opacity: 1;
+            }
+        
+            100%{
+                font-size: 50px;
+            }
+        }
 
-
-.contParrafo2{
-    display: flex;
-    justify-content: center;
-}
-    .parrafo2{
-        border-top: #C70039 solid 2px;
-        border-bottom: #C70039 solid 2px;
-        color: #C70039;
-        font-size: 20px;
-        font-family: 'Cinzel Decorative', cursive;
-        font-weight: 600;
-    }
-    
-
-.contGeneralObras{
-    position: relative;
-    top: 150px;
-}    
 .contObras{
     display: flex;
     justify-content: center;
+    margin-top: 100px;
+}
+
+.inicialObras{
+    color: #C70039;
+    font-weight: 600;
 }
     .h2Obras{
         margin-top: 40px;
@@ -184,42 +75,7 @@ body::-webkit-scrollbar {
     }
 
 
-  .card{
-      margin: 25px;
-      transition: all 0.3s;
-      box-shadow: 0px 0px 5px 2px black;
-  } 
-  .card:hover{
-      box-shadow: 0px 0px 25px 0px black;  
-  } 
-.contCardTitle{
-    display: flex;
-    justify-content: center;
-}
-    .card-title{
-        border-bottom: solid 2px #C70039;
-        font-weight: 600;
-       font-family: 'Cinzel Decorative', cursive;
+    .hola{
+        background-color: #C70039;
+        height: 100px;
     }
-
-.contInfo{
-    display: flex;
-}  
-    .h5Info{
-        font-family: 'Cinzel', serif;
-        font-weight: 600;
-        border-bottom: #C70039 solid 2px;
-    }
-        .info{
-            font-size: 18px;
-            text-align: left;
-            font-weight: 500;
-            font-family: 'Cinzel', serif;
-        }
-.card-text{
-    font-weight: 500;
-   font-family: 'Cinzel', serif;
-   font-size: 18px;
-}  
-
-

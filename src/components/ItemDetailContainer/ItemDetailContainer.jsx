@@ -1,24 +1,28 @@
 import {useState, useEffect} from 'react'
 import ItemDetail from '../ItemDetail/ItemDetail'
 import { getFech } from '../../services/getFech'
+import { useParams } from 'react-router-dom';
 
-const ItemDetailContainer = () => {
+
+export const ItemDetailContainer = () => {
+    const [producto, setProducto] = useState({})
+    const { id } = useParams()
     
-    const [prod, setProd] = useState({})
 
     useEffect(() => {
         getFech
-        .then( res => {setProd(res)})    
+        .then( res => setProducto(res.find(producto => producto.id === parseInt(id))))    
         .catch(err => console.log(err))
         .finally(()=> console.log(false))       
-    },[]) 
+    },[id]) 
       
-    console.log(prod);
+    console.log(id);
 
     return (
         <>
             <div>
-                <ItemDetail producto={prod[0]}/>
+                <div className="divInvisibleCart"></div>
+                <ItemDetail producto={producto} />
             </div>
         </>
     )
