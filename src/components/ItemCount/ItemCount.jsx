@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './ItemCount.css'
 
 
-export const ItemCount = ({stock, initial}) => {
+export const ItemCount = ({stock, initial, onAdd}) => {
     const [count, setCount] = useState(initial)
 
     const sumItem = () => {
@@ -13,10 +13,6 @@ export const ItemCount = ({stock, initial}) => {
         count > initial ? setCount(count - 1) : alert('Debe sumar prducto para añadir al carrito')
 
     }
-
-    const onAdd = () => {
-       if (count >= 1) alert(`Agregaste ${count} productos`)
-    }
     
     return (
         <div>
@@ -26,7 +22,7 @@ export const ItemCount = ({stock, initial}) => {
 
                 <button className="btn restar" onClick={resItem}>-</button>
 
-                <button className="agregar" onClick={onAdd}>Agregar al carrito</button>
+                <button className="agregar" onClick = {() => onAdd (count)}>Agregar al carrito</button>           
             </div>
         </div>
     )

@@ -5,7 +5,7 @@ export const cart = () => {
     return (
         <div>
           <div className="divInvisibleCart"></div>
-          <h2>hola soy el carrito</h2>
+          <h2>Carrito</h2>
            
         </div>
     )

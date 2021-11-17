@@ -13,20 +13,35 @@
     font-family: 'Cinzel', serif;
     font-weight: 500;
     padding: 10px;
-
 }
 
 
 .agregar{
-
-    padding: 5px;
-    border:  #C70039 solid 1px;
+    border: solid #C70039 1px;
+    font-family: 'Cinzel', serif;
+    font-weight: 500;
+    padding: 8px;
     transition: all 0.3s;
     border-radius: 5px;
     margin-left: 30px;
 }
     .agregar:hover{
+        box-shadow: 0px 0px 10px 4px #C70039;
+    }
+
+.comprar{
+    font-family: 'Cinzel', serif;
+    padding: 8px;
+    font-weight: 500;
+    border:  #C70039 solid 1px;
+    transition: all 0.3s;
+    border-radius: 5px;
+    margin-left: 30px;
+}
+    .comprar:hover{
         background-color: #C70039;
         border: solid #C70039 2px;
-        color: white;
-    }
+        color: white; ;
+    }  
+    
+    
