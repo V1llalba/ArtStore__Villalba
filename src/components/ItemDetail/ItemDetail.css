@@ -36,7 +36,8 @@
 }
 
 .volver{
-    display: block;
+    position: absolute;
+    left: 0px;
     margin:20px;
     border: none;
     background-color: #C70039;
@@ -50,6 +51,7 @@
         background-color: white;
         color: black;
         border: solid #C70039 1px;
+        box-shadow: 0px 0px 15px 5px #C70039;
     }
 
 .irAlCarrito{
@@ -64,3 +66,5 @@
         font-size: 18px;
         border-bottom: 1px solid #C70039;
     }    
+
+   

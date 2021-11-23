@@ -32,7 +32,6 @@ function ItemListContainer() {
         }
     }, [cuadrosID])               
 
-    console.log(productos)
     
     return (
         <div>

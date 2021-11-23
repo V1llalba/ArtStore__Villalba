@@ -1,14 +1,60 @@
 import React from 'react'
-import '../Cart/Cart.css'
+import { useCartContext } from '../../Context/CartContext'
+import {Link} from 'react-router-dom'
+import './Cart.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
 
-export const cart = () => {
-    return (
+export const Cart = () => {
+
+  const { CartList, borrarCarrito, borrarItem , cartTotal} = useCartContext ()
+    console.log (CartList)
+      return (
         <div>
           <div className="divInvisibleCart"></div>
-          <h2>Carrito</h2>
-           
+              {CartList.length === 0 ?   <><h2 className='cartTitle mt-5 tituloCarro'>¡El carrito esta vacio!</h2>
+            <div>
+            <Link to="/">
+                <button className="buttonCount mt-5">Seleccionar un producto</button>
+            </Link>
+            </div>
+            </>
+            
+        :
+        
+        <>
+        <div className='cartContent container'>
+            <table>
+                <tr className='headerTable'>
+                    
+                    <td>Nombre</td>
+                    <td>Cantidad</td>
+                    <td className='pl-5 pr-5'>Precio</td>
+                    <td>Subtotal</td>
+                    <td>PRECIO FINAL</td>
+                    <td>Borrar item</td>
+                    <td className='pr-5'>Borrar Carrito<a className='btnTrash'> <FontAwesomeIcon icon={faTrashAlt} onClick={borrarCarrito} /></a></td>
+                    
+                </tr>
+                    {CartList.map(prod => 
+                    <tr className=''
+                        key={prod.id}> 
+                        <td className='prodName'>{prod.nombre}</td>
+                        <td>{prod.cantidad}</td>
+                        <td>$ {prod.precio} </td>
+                      <td> $ {prod.subtotal} </td>
+                       <td> <a> <FontAwesomeIcon icon={faTrashAlt} onClick={() => { borrarItem(prod.id) } } /></a></td>
+                    </tr>
+                    
+                    
+                    )}
+                    
+            </table>
+            <h2>El total de tu compra es de {cartTotal}</h2>
+                </div>
+                </>
+        }
+     
         </div>
     )
 }
-
-export default cart

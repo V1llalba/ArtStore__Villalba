@@ -93,12 +93,11 @@
     cursor: pointer;
     border: none;
     border-radius: 20px;
-    box-shadow: 1px 1px 30px -5px rgba(0, 0, 0, 0.7);
     transition: box-shadow 0.5;
     transition: all 0.3s;
 }
 .botonCard:hover{
-    background-color: #c4315a;
-    box-shadow: 1px 1px 20px 5px rgba(0, 0, 0, 0.7);
+    
+    box-shadow: 0px 0px 20px 5px #C70039;
 }
 
