@@ -1,59 +1,112 @@
 .divInvisibleCart{
-    margin-top: 80px;
-}
-.tituloCarro{
-    color: rgb(255, 255, 255);
+    margin-top: 100px;
 }
 
-.cartTitle {
-    color: white;
-}
 
-.cartContent {
-    background-color: antiquewhite;
-    width: 60%;
+.contCartTitulo{
+    display: flex;
+    justify-content: center;
+}
+    .cartTitulo{
+        font-family: 'Cinzel Decorative', cursive;
+        border-bottom: #C70039 solid 2px;
+    }   
+        .inicialCartTitulo{
+            color: #C70039;
+            font-weight: 700;
+        }
+
+        .buttonCount{
+            font-family: 'Cinzel Decorative', cursive;
+            background-color: rgb(247, 235, 216);
+            color: #C70039;
+            font-weight: 700;
+            margin-top: 50px;
+            border: none;
+            padding: 10px;
+            transition: all 0.3s;
+        }
+        .buttonCount:hover{
+            font-size: 18px;
+            border-left: #C70039 2px solid;
+            border-right: #C70039 2px solid;
+            border-radius: 10px;
+        }
+
+
+
+.cartTableContent{
+    background-color: rgb(247, 235, 216);
     
 }
 
-.prodName {
-    font-size: 20px;
+    .contInfoTable{
+        background-color: #C70039;
+    }
+        .infoTable{
+            width: 200px;
+            height: 80px;
+            text-align: center;
+            color: white;
+            font-family: 'Cinzel Decorative', cursive;
+            
+        }
+
+.jaja{
+    background-color: #212121;
+    border-bottom: solid white 1px;
+}  
+
+    .prodImgTable{
+        width: 50px;
+    }
+    .prodTituloTable{
+        font-family: 'Cinzel Decorative', cursive;
+        background-color: #212121;
+        color: white;
+        padding: 20px;
+        border-bottom: solid white 1px;
+    }
     
-}
+    .prodCantTable{
+        color: white;
+        padding: 20px; 
+    }
 
-.fotoCart {
-    width: 20%;
-}
+    .prodPrecioTable{
+        color: white;
+        padding: 20px; 
+    }
+    .prodSubTotalTable{
+        color: white;
+        padding: 20px; 
+    }
+    .borrarItem{
+        color: white;
+        padding: 20px; 
+        transition: all 0.3s;
+    }
+        .borrarItem:hover{
+            font-size: 20px;
+            color: #C70039;
+        }
 
-.btnTrash {
+    .prodTotalTable{
+        font-family: 'Cinzel Decorative', cursive;
+    }   
+    .totalNum{
+        color: #C70039;
+        font-weight: bold;
+    } 
+      
+
+.borrarCarrito {
     color: white;
     font-size: 25px;
-
+    transition: all 0.3s;
+}
+.borrarCarrito:hover {
+    color: #212121;
 }
 
-.btnTrash:hover {
-    color: rgb(233, 167, 27);
-}
 
-.headerTable {
-    background-color: black;
-    color: white;
-}
-
-.gifWaiting {
-    width: 30%;
-}
-/* 
-.totalCount {
-    width: 200%;
-} */
-
-.totalCountContainer {
-    background-color: black;
-    color: white;
-}
-
-td{
-    width: 200px;
-    height: 80px;
-    text-align: center;
-}
