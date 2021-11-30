@@ -31,11 +31,9 @@ export const Cart = () => {
                     <td className="infoTable">Cantidad</td>
                     <td className="infoTable ">Precio</td>
                     <td className="infoTable">Subtotal</td>
-                    <td className="infoTable">PRECIO FINAL</td>
                     <td className="infoTable">Borrar item</td>
-                    <td className="infoTable">Borrar Carrito<a className='borrarCarrito'> <FontAwesomeIcon icon={faTrashAlt} onClick={borrarCarrito} /></a></td>
+                    <td className="infoTable">Borrar todo<a className='borrarCarrito'> <FontAwesomeIcon icon={faTrashAlt} onClick={borrarCarrito} /></a></td>
                   </tr>
-                  
                     {CartList.map(prod => 
                       <tr className="jaja"
                         key={prod.id}>
@@ -45,8 +43,7 @@ export const Cart = () => {
                         <td className="prodSubTotalTable"> $ {prod.subtotal} </td>
                        <td className="borrarItem"><a><FontAwesomeIcon icon={faTrashAlt} onClick={() => { borrarItem(prod.id) } } /></a></td>
                     </tr>
-                    )}
-                    
+                    )} 
             </table>
             <h4 className="prodTotalTable">El total de tu compra es de <span className="totalNum">${cartTotal}</span></h4>
                 </div>

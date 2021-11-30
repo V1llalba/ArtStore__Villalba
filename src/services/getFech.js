@@ -184,7 +184,7 @@ imagen:'https://i.ibb.co/1r9mtN1/paisajismo5.png'
 id: 17,
 titulo: "HAIR",
 descripcion: 'Manifestacion de Jhon Lennon & Joko Ono por la lucha de la paz, Famosa imagen ,Hair peace Bed Peace.revindicando la paz. Siempre en mis obras manifiesto aquellos actos que marcaron algun dia nuestra historia y aquellos personajes que lucharon por ella. Jhon & Joko siempre estaran en mi corazon y en mis lienzos.Love',
-precio: "437.999",
+precio: 437.999,
 categoria: "street Art",
 tecnica:"Acrílico, Graffiti en Lienzo",
 dimensiones: "180x160cm",

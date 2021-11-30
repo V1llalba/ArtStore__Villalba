@@ -1,23 +1,23 @@
 import {useState, useEffect} from 'react'
 import ItemDetail from '../ItemDetail/ItemDetail'
-import { getFech } from '../../services/getFech'
 import { useParams } from 'react-router-dom';
+import {getFirestore} from '../../services/getFirestore'
 
 
 export const ItemDetailContainer = () => {
-    const [producto, setProducto] = useState({})
+    const [producto, setProducto] = useState([])
     const { id } = useParams()
     
 
     useEffect(() => {
-        getFech
-        .then( res => setProducto(res.find(producto => producto.id === parseInt(id))))    
-        .catch(err => console.log(err))
-        .finally(()=> console.log(false))       
-    },[id]) 
+        const db1 = getFirestore()
+        db1.collection('items').doc(id).get()
+            .then(res => {
+                setProducto({id: res.id, ...res.data()})
+            })
+            .catch(err => console.log(err))
+    },[] ) 
       
-    console.log(id);
-
     return (
         <>
             <div>
