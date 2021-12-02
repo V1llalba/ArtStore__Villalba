@@ -6,12 +6,37 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
 
 export const Cart = () => {
+  
+  const { CartList, borrarCarrito, borrarItem, cartTotal } = useCartContext()
+  
+  const generarOrden = (e) => {
 
-  const { CartList, borrarCarrito, borrarItem , cartTotal} = useCartContext ()
-    console.log (CartList)
+    e.preventDefault()
+    const orden = {}
+
+    /*  orden.date = firebase.firestore.Timestamp.fromDate(new Date()); */
+    
+    orden.buyer = {nombre:'Jorge', email:'j@gmail.com', tel:'123456'}
+    orden.total = cartTotal()
+
+    orden.items = CartList.map(cartItem => {
+      const id = cartItem.id
+      const nombre = cartItem.nombre
+      const precio = cartItem.precio * cartItem.cantidad
+
+      return { id, nombre, precio }
+      
+    })
+    
+  }
+  console.log(generarOrden)
       return (
         <div>
           <div className="divInvisibleCart"></div>
+
+         {/*  <section>
+            {idOrder !== '' && <label>El id de su orden es: {idOrder}</label>}
+          </section> */}
           
           {CartList.length === 0 ? <> <div className="contCartTitulo">
                     <h2 className='cartTitulo'> <span className="inicialCartTitulo">C</span>arrito vacio</h2>
@@ -46,10 +71,14 @@ export const Cart = () => {
                     )} 
             </table>
             <h4 className="prodTotalTable">El total de tu compra es de <span className="totalNum">${cartTotal}</span></h4>
-                </div>
-                </>
-        }
-     
+            </div>
+            </>
+          }
+          
+          <form onSubmit={generarOrden}>
+            
+            <button>enviar</button>
+          </form>
         </div>
     )
 }
