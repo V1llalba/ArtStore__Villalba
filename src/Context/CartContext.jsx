@@ -30,8 +30,10 @@ export const CartContextProvider = ({children}) => {
     }
   };
   
-      const cartTotal = CartList.reduce ((total,item)=> total + item.subtotal, 0)
-      console.log (cartTotal)
+  const cartTotal = () => {
+    CartList.reduce((total, item) => total + item.subtotal, 0)
+  }
+        
   
  const borrarCarrito = () => {
     setCartList([]);
@@ -57,7 +59,6 @@ export const CartContextProvider = ({children}) => {
           cantidadItem,
           borrarItem,
           cartTotal 
-    
         }}
       >
         {children}

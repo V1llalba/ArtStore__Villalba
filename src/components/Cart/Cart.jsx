@@ -4,81 +4,79 @@ import {Link} from 'react-router-dom'
 import './Cart.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
+import { useState } from 'react'
+import Modal from '../Modal/Modal'  
+import { Button } from "react-bootstrap"  
+
 
 export const Cart = () => {
-  
-  const { CartList, borrarCarrito, borrarItem, cartTotal } = useCartContext()
-  
-  const generarOrden = (e) => {
 
-    e.preventDefault()
-    const orden = {}
-
-    /*  orden.date = firebase.firestore.Timestamp.fromDate(new Date()); */
+    const [showModal, setShowModal] = useState(false);
     
-    orden.buyer = {nombre:'Jorge', email:'j@gmail.com', tel:'123456'}
-    orden.total = cartTotal()
+    const { CartList, borrarCarrito, borrarItem , cartTotal} = useCartContext ()
+    console.log (CartList)
 
-    orden.items = CartList.map(cartItem => {
-      const id = cartItem.id
-      const nombre = cartItem.nombre
-      const precio = cartItem.precio * cartItem.cantidad
-
-      return { id, nombre, precio }
-      
-    })
-    
-  }
-  console.log(generarOrden)
-      return (
+    return (
+        
         <div>
-          <div className="divInvisibleCart"></div>
-
-         {/*  <section>
-            {idOrder !== '' && <label>El id de su orden es: {idOrder}</label>}
-          </section> */}
-          
-          {CartList.length === 0 ? <> <div className="contCartTitulo">
-                    <h2 className='cartTitulo'> <span className="inicialCartTitulo">C</span>arrito vacio</h2>
-              </div>
+        {CartList.length === 0 ?   <><h2 className='cartTitle mt-5 tituloCarro'>¡El carrito esta vacio!</h2>
+       
+        <div>
             <Link to="/cuadros">
-                <button className="buttonCount">Seleccionar un producto</button>
+                <button className="buttonCount mt-5">Seleccionar un producto</button>
             </Link>
+            </div>
             </>
             
         :
         
         <>
-        <div className='cartTableContent container'>
+        <div className='cartContent container'>
             <table>
-                <tr className='contInfoTable'>
-                    <td className="infoTable">Nombre</td>
-                    <td className="infoTable">Cantidad</td>
-                    <td className="infoTable ">Precio</td>
-                    <td className="infoTable">Subtotal</td>
-                    <td className="infoTable">Borrar item</td>
-                    <td className="infoTable">Borrar todo<a className='borrarCarrito'> <FontAwesomeIcon icon={faTrashAlt} onClick={borrarCarrito} /></a></td>
-                  </tr>
+                <tr className='headerTable'>
+                    
+                    <td>Nombre</td>
+                    <td>Cantidad</td>
+                    <td className='pl-5 pr-5'>Precio</td>
+                    <td>Subtotal</td>
+                   
+                    <td>Borrar item</td>
+                    <td className='pr-5'>Borrar Carrito<a className='btnTrash'> <FontAwesomeIcon icon={faTrashAlt} onClick={borrarCarrito} /></a></td>
+                    
+                </tr>
                     {CartList.map(prod => 
-                      <tr className="jaja"
-                        key={prod.id}>
-                        <td className='prodTituloTable'>{prod.titulo}</td>
-                        <td className='prodCantTable'>{prod.cantidad}</td>
-                        <td  className='prodPrecioTable'>$ {prod.precio} </td>
-                        <td className="prodSubTotalTable"> $ {prod.subtotal} </td>
-                       <td className="borrarItem"><a><FontAwesomeIcon icon={faTrashAlt} onClick={() => { borrarItem(prod.id) } } /></a></td>
+                    <tr className=''
+                        key={prod.id}> 
+                        <td className='prodName'>{prod.nombre}</td>
+                        <td>{prod.cantidad}</td>
+                        <td>$ {prod.precio} </td>
+                      <td> $ {prod.subtotal} </td>
+                       <td> <a> <FontAwesomeIcon icon={faTrashAlt} onClick={() => { borrarItem(prod.id) } } /></a></td>
                     </tr>
-                    )} 
+                    
+                    
+                    )}
+                    
             </table>
-            <h4 className="prodTotalTable">El total de tu compra es de <span className="totalNum">${cartTotal}</span></h4>
-            </div>
-            </>
-          }
-          
-          <form onSubmit={generarOrden}>
-            
-            <button>enviar</button>
-          </form>
-        </div>
-    )
+            <h2>El total de tu compra es de ${cartTotal()}</h2>
+                </div>
+                </>
+        }
+
+              {/*  <form 
+                onSubmit={generarOrden} 
+               onChange={handleChange} 
+            >
+                <input type='text' name='name' placeholder='name' value={formData.nombre}/>
+                <input type='text' name='phone'placeholder='tel' value={formData.tel}/>
+                <input type='email' name='email'placeholder='email' value={formData.email}/>
+                <button>Enviar</button>
+            </form>  */}
+
+             <Button variant="outline-secondary" onClick={() => setShowModal(true)}>Generar orden de compra</Button> 
+            <Modal show={showModal} onHide={() => setShowModal(false)}/>  
+
+        </div>    
+        
+        )    
 }
